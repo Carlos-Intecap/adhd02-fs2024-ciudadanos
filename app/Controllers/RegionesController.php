@@ -2,7 +2,7 @@
 namespace App\Controllers;
 //utilizar el modelo
 use App\Models\RegionesModel;
-class Regiones extends BaseController
+class RegionesController extends BaseController
 {
     public function index(): string
     {

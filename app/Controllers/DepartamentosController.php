@@ -2,7 +2,7 @@
 namespace App\Controllers;
 //utilizar el modelo
 use App\Models\DepartamentosModel;
-class Departamentos extends BaseController
+class DepartamentosController extends BaseController
 {
     public function index(): string
     {

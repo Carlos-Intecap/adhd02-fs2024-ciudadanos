@@ -2,7 +2,7 @@
 namespace App\Controllers;
 //utilizar el modelo
 use App\Models\CiudadanosModel;
-class Ciudadanos extends BaseController
+class CiudadanosController extends BaseController
 {
     public function index(): string
     {

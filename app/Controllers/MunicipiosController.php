@@ -2,7 +2,7 @@
 namespace App\Controllers;
 //utilizar el modelo
 use App\Models\MunicipiosModel;
-class Municipios extends BaseController
+class MunicipiosController extends BaseController
 {
     public function index(): string
     {

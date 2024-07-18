@@ -13,19 +13,19 @@
                 <a class="nav-link" href="<?php echo base_url('/');?>">Inicio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('ver_niveles');?>">Niveles académicos</a>
+                <a class="nav-link" href="<?php echo base_url('niveles');?>">Niveles académicos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('ver_ciudadanos');?>">Ciudadanos</a>
+                <a class="nav-link" href="<?php echo base_url('ciudadanos');?>">Ciudadanos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('ver_municipios');?>">Municipios</a>
+                <a class="nav-link" href="<?php echo base_url('municipios');?>">Municipios</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('ver_departamentos');?>">Departamentos</a>
+                <a class="nav-link" href="<?php echo base_url('departamentos');?>">Departamentos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="<?php echo base_url('ver_regiones');?>">Regiones</a>
+                <a class="nav-link active" aria-current="page" href="<?php echo base_url('regiones');?>">Regiones</a>
             </li>
         </ul>
         <h1 class="text-center">Regiones</h1>

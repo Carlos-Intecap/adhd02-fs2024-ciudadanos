@@ -13,11 +13,11 @@
             <div class="col col-4 text-center">
                 <h1>Base de datos - Ciudadanos</h1>
                 <div class="list-group">
-                    <a href="ver_niveles" class="list-group-item list-group-item-action list-group-item-secondary">Niveles</a>
-                    <a href="ver_ciudadanos" class="list-group-item list-group-item-action list-group-item-secondary">Ciudadanos</a>
-                    <a href="ver_municipios" class="list-group-item list-group-item-action list-group-item-secondary">Municipios</a>
-                    <a href="ver_departamentos" class="list-group-item list-group-item-action list-group-item-secondary">Departamentos</a>
-                    <a href="ver_regiones" class="list-group-item list-group-item-action list-group-item-secondary">Regiones</a>
+                    <a href="niveles" class="list-group-item list-group-item-action list-group-item-secondary">Niveles</a>
+                    <a href="ciudadanos" class="list-group-item list-group-item-action list-group-item-secondary">Ciudadanos</a>
+                    <a href="municipios" class="list-group-item list-group-item-action list-group-item-secondary">Municipios</a>
+                    <a href="departamentos" class="list-group-item list-group-item-action list-group-item-secondary">Departamentos</a>
+                    <a href="regiones" class="list-group-item list-group-item-action list-group-item-secondary">Regiones</a>
                 </div>
             </div>
         </div>

@@ -6,8 +6,10 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
-$routes->get('ver_regiones','Regiones::index');
-$routes->get('ver_departamentos','Departamentos::index');
-$routes->get('ver_ciudadanos','Ciudadanos::index');
-$routes->get('ver_municipios','Municipios::index');
-$routes->get('ver_niveles','Niveles');
+$routes->get('regiones','RegionesController::index');
+$routes->get('departamentos','DepartamentosController::index');
+$routes->get('ciudadanos','CiudadanosController::index');
+$routes->get('municipios','MunicipiosController::index');
+$routes->get('niveles','NivelesController::index');
+$routes->post('agregar_nivel','NivelesController::agregarNivel');
+$routes->get('nuevo_nivel','NivelesController::nuevoNivel');
