@@ -29,6 +29,9 @@
             </li>
         </ul>
         <h1 class="text-center">Ciudadanos</h1>
+
+        <a href="nuevo_ciudadano" class="btn btn-primary">Nuevo Ciudadano</a>
+
         <table class="table table-border table-striped">
             <thead>
                 <tr>

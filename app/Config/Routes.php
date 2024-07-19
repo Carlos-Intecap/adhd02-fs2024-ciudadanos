@@ -13,3 +13,5 @@ $routes->get('municipios','MunicipiosController::index');
 $routes->get('niveles','NivelesController::index');
 $routes->post('agregar_nivel','NivelesController::agregarNivel');
 $routes->get('nuevo_nivel','NivelesController::nuevoNivel');
+$routes->post('agregar_ciudadano','CiudadanosController::agregarCiudadano');
+$routes->get('nuevo_ciudadano','CiudadanosController::nuevoCiudadano');
