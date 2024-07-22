@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
         <ul class="nav nav-tabs justify-content-center">
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url('/');?>">Inicio</a>
@@ -46,6 +46,7 @@
                     <th>Código de nivel academico</th>
                     <th>Codigo de municipio</th>
                     <th>Contraseña</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -64,6 +65,10 @@
                     <td><?php echo $ciudadano['cod_nivel_acad'];?></td>
                     <td><?php echo $ciudadano['cod_muni'];?></td>
                     <td><?php echo $ciudadano['contra'];?></td>
+                    <td>
+                        <a href="" class="btn btn-info">Actualizar</a>
+                        <a href="eliminar_ciudadano/<?php echo $ciudadano['dpi']?>" class="btn btn-danger">Eliminar</a>
+                    </td>
                 </tr>
                 <?php
                 endforeach;

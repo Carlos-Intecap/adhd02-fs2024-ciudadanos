@@ -34,4 +34,11 @@ class CiudadanosController extends BaseController
         $ciudadanos->insert($datos);
         return redirect()->route('ciudadanos');
     }
+
+    public function eliminarCiudadano($id=null)
+    {
+        $ciudadanos = new CiudadanosModel();
+        $ciudadanos->delete(['dpi'=>$id]);
+        return redirect()->route('ciudadanos');
+    }
 }

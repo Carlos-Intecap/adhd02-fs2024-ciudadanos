@@ -26,4 +26,11 @@ class NivelesController extends BaseController
         $niveles->insert($datos);
         return redirect()->route('niveles');
     }
+
+    public function eliminarNivel($id=null)
+    {
+        $niveles = new NivelesModel();
+        $niveles->delete(['cod_nivel_acad'=>$id]);
+        return redirect()->route('niveles');
+    }
 }

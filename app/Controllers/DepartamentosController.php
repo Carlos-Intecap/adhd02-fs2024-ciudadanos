@@ -1,15 +1,36 @@
 <?php
+
 namespace App\Controllers;
-//utilizar el modelo
 use App\Models\DepartamentosModel;
 class DepartamentosController extends BaseController
 {
     public function index(): string
     {
-        //creando un objeto de tipo DepartamentosModel
         $departamento = new DepartamentosModel();
         $datos['datos']=$departamento->findAll();
-        //findAll() = select * from departamentos;
         return view('departamentos',$datos);
+    }
+    public function nuevoDepartamento(): string
+    {
+        return view('departamentos_nuevos');
+    }
+
+    public function agregarDepartamento()
+    {
+        $datos=[
+            'cod_depto' => $this->request->getVar('txtDepto'),
+            'nombre_depto' => $this->request->getVar('txtNombre'),
+            'cod_region' => $this->request->getVar('txtCodRegion')
+        ];
+        $departamentos = new DepartamentosModel();
+        $departamentos->insert($datos);
+        return  redirect()->route('departamentos');
+    }
+
+    public function eliminarDepartamento($id=null)
+    {
+        $departamentos = new DepartamentosModel();
+        $departamentos->delete(['cod_depto'=>$id]);
+        return redirect()->route('departamentos');
     }
 }

@@ -3,24 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Agregar nivel</title>
+    <title>Agregar municipio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
     <div class="container">
-        <h1>Agregar nivel</h1>
-        <form action="agregar_nivel" method="post">
+        <h1>Agregar municipio</h1>
+        <form action="agregar_municipio" method="post">
             <div class="mb-8">
-                <label for="txtCodNivel" class="form-label">Código de nivel academico</label>
-                <input type="number" id="txtCodNivel" name="txtCodNivel" class="form-control" placeholder="Ingrese código">
+                <label for="txtCodMuni" class="form-label">Código de municipio</label>
+                <input type="number" id="txtCodMuni" name="txtCodMuni" class="form-control" placeholder="Ingrese código de municipio">
             </div>
             <div class="mb-8">
                 <label for="txtNombre" class="form-label">Nombre</label>
-                <input type="text" id="txtNombre" name="txtNombre" class="form-control" placeholder="Ingrese nombre">
+                <input type="text" id="txtNombre" name="txtNombre" class="form-control" placeholder="Ingrese nombre del municipio">
             </div>
             <div class="mb-8">
-                <label for="txtDescripcion" class="form-label">Descripción</label>
-                <input type="text" id="txtDescripcion" name="txtDescripcion" class="form-control" placeholder="Ingrese descripción">
+                <label for="txtCodDepto" class="form-label">Código del departamento</label>
+                <input type="number" id="txtCodDepto" name="txtCodDepto" class="form-control" placeholder="Ingrese nombre del departamento">
             </div>
             <div class="mb-8">
                 <input type="submit" class="btn btn-primary" value="Guardar" id="btGuardar" name="btnGuardar">

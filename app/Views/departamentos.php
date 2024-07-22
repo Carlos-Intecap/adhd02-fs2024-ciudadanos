@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
         <ul class="nav nav-tabs justify-content-center">
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url('/');?>">Inicio</a>
@@ -29,12 +29,16 @@
             </li>
         </ul>
         <h1 class="text-center">Departamentos</h1>
+
+        <a href="nuevo_departamento" class="btn btn-primary">Nuevo Departamento</a>
+
         <table class="table table-border table-striped">
             <thead>
                 <tr>
                     <th>Código de departamento</th>
                     <th>Nombre</th>
                     <th>Código de región</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -45,6 +49,10 @@
                     <td><?php echo $departamento['cod_depto'];?></td>
                     <td><?php echo $departamento['nombre_depto'];?></td>
                     <td><?php echo $departamento['cod_region'];?></td>
+                    <td>
+                        <a href="" class="btn btn-info">Actualizar</a>
+                        <a href="eliminar_departamento/<?php echo $departamento['cod_depto']?>" class="btn btn-danger">Eliminar</a>
+                    </td>
                 </tr>
                 <?php
                 endforeach;
