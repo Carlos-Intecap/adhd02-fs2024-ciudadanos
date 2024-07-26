@@ -33,4 +33,19 @@ class RegionesController extends BaseController
         $regiones->delete(['cod_region'=>$id]);
         return redirect()->route('regiones');
     }
+    public function buscarRegion($id=null){
+        $regiones = new RegionesModel();
+        $datos['datos']=$regiones->where('cod_region',$id)->first();
+        return view('form_modificar_region',$datos);
+    }
+    public function modificarRegion(){
+        $datos=[
+            'cod_region'=>$this->request->getVar('txtCodRegion'),
+            'nombre'=>$this->request->getVar('txtNombre'),
+            'descripcion'=>$this->request->getVar('txtDescripcion')
+        ];
+        $regiones = new RegionesModel();
+        $regiones->update($datos['cod_region'],$datos);
+        return redirect()->route('regiones');
+    }
 }

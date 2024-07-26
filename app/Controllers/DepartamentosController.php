@@ -33,4 +33,19 @@ class DepartamentosController extends BaseController
         $departamentos->delete(['cod_depto'=>$id]);
         return redirect()->route('departamentos');
     }
+    public function buscarDepartamento($id=null){
+        $departamentos = new DepartamentosModel();
+        $datos['datos']=$departamentos->where('cod_depto',$id)->first();
+        return view('form_modificar_departamento',$datos);
+    }
+    public function modificarDepartamento(){
+        $datos=[
+            'cod_depto'=>$this->request->getVar('txtDepto'),
+            'nombre_depto'=>$this->request->getVar('txtNombre'),
+            'cod_region'=>$this->request->getVar('txtCodRegion')   
+        ];
+        $departamentos = new DepartamentosModel();
+        $departamentos->update($datos['cod_depto'],$datos);
+        return redirect()->route('departamentos');
+    }
 }

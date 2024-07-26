@@ -5,6 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+//VISTAS
 $routes->get('/', 'Home::index');
 $routes->get('regiones','RegionesController::index');
 $routes->get('departamentos','DepartamentosController::index');
@@ -12,10 +13,10 @@ $routes->get('ciudadanos','CiudadanosController::index');
 $routes->get('municipios','MunicipiosController::index');
 $routes->get('niveles','NivelesController::index');
 
+//AGREGAR
 $routes->post('agregar_nivel','NivelesController::agregarNivel');
 $routes->get('nuevo_nivel','NivelesController::nuevoNivel');
 
-//AGREGAR
 $routes->post('agregar_ciudadano','CiudadanosController::agregarCiudadano');
 $routes->get('nuevo_ciudadano','CiudadanosController::nuevoCiudadano');
 
@@ -38,3 +39,15 @@ $routes->get('eliminar_region/(:num)','RegionesController::eliminarRegion/$1');
 //ACTUALIZAR
 $routes->get('buscar_nivel/(:num)','NivelesController::buscarNivel/$1');
 $routes->post('modificar_nivel','NivelesController::modificarNivel');
+
+$routes->get('buscar_ciudadano/(:num)','CiudadanosController::buscarCiudadano/$1');
+$routes->post('modificar_ciudadano','CiudadanosController::modificarCiudadano');
+
+$routes->get('buscar_municipio/(:num)','MunicipiosController::buscarMunicipio/$1');
+$routes->post('modificar_municipio','MunicipiosController::modificarMunicipio');
+
+$routes->get('buscar_departamento/(:num)','DepartamentosController::buscarDepartamento/$1');
+$routes->post('modificar_departamento','DepartamentosController::modificarDepartamento');
+
+$routes->get('buscar_region/(:num)','RegionesController::buscarRegion/$1');
+$routes->post('modificar_region','RegionesController::modificarRegion');

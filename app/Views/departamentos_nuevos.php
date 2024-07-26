@@ -6,9 +6,9 @@
     <title>Agregar departamento</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
-  <body>
-    <div class="container">
-        <h1>Agregar departamento</h1>
+  <body class="bg-info-subtle">
+    <div class="container col-xl-3">
+        <h1 class="text-center mt-2">Agregar departamento</h1>
         <form action="agregar_departamento" method="post">
             <div class="mb-8">
                 <label for="txtDepto" class="form-label">Código de departamento</label>
@@ -23,7 +23,7 @@
                 <input type="number" id="txtCodRegion" name="txtCodRegion" class="form-control" placeholder="Ingrese código de la región">
             </div>
             <div class="mb-8">
-                <input type="submit" class="btn btn-primary" value="Guardar" id="btGuardar" name="btnGuardar">
+                <input type="submit" class="btn btn-success form-control mt-2" value="Guardar" id="btGuardar" name="btnGuardar">
             </div>
         </form>
     </div>

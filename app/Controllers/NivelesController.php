@@ -26,11 +26,25 @@ class NivelesController extends BaseController
         $niveles->insert($datos);
         return redirect()->route('niveles');
     }
-
     public function eliminarNivel($id=null)
     {
         $niveles = new NivelesModel();
         $niveles->delete(['cod_nivel_acad'=>$id]);
+        return redirect()->route('niveles');
+    }
+    public function buscarNivel($id=null){
+        $niveles = new NivelesModel();
+        $datos['datos']=$niveles->where('cod_nivel_acad',$id)->first();
+        return view('form_modificar_nivel',$datos);
+    }
+    public function modificarNivel(){
+        $datos=[
+            'cod_nivel_acad'=>$this->request->getVar('txtCodNivel'),
+            'nombre'=>$this->request->getVar('txtNombre'),
+            'descripcion'=>$this->request->getVar('txtDescripcion')
+        ];
+        $niveles = new NivelesModel();
+        $niveles->update($datos['cod_nivel_acad'],$datos);
         return redirect()->route('niveles');
     }
 }

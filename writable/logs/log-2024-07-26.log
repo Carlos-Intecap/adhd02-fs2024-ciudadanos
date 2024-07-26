@@ -1,0 +1,144 @@
+CRITICAL - 2024-07-26 13:51:48 --> ErrorException: Undefined array key "cliente_id"
+[Method: GET, Route: buscar_nivel/9]
+in APPPATH\Views\form_modificar_nivel.php on line 22.
+ 1 APPPATH\Views\form_modificar_nivel.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cliente_id"', 'C:\\xampp\\htdocs\\fs2024\\ci4_ciudadanos\\app\\Views\\form_modificar_nivel.php', 22)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\fs2024\\ci4_ciudadanos\\app\\Views\\form_modificar_nivel.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_nivel', [], true)
+ 5 APPPATH\Controllers\NivelesController.php(38): view('form_modificar_nivel', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NivelesController->buscarNivel('9')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NivelesController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-26 14:01:51 --> ErrorException: Undefined variable $nivel
+[Method: GET, Route: ciudadanos]
+in APPPATH\Views\ciudadanos.php on line 81.
+ 1 APPPATH\Views\ciudadanos.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nivel', 'C:\\xampp\\htdocs\\fs2024\\ci4_ciudadanos\\app\\Views\\ciudadanos.php', 81)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\fs2024\\ci4_ciudadanos\\app\\Views\\ciudadanos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('ciudadanos', [], true)
+ 5 APPPATH\Controllers\CiudadanosController.php(11): view('ciudadanos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CiudadanosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CiudadanosController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-26 14:19:46 --> ErrorException: Undefined variable $niveles
+[Method: GET, Route: buscar_ciudadano/3]
+in APPPATH\Controllers\CiudadanosController.php on line 46.
+ 1 APPPATH\Controllers\CiudadanosController.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $niveles', 'C:\\xampp\\htdocs\\fs2024\\ci4_ciudadanos\\app\\Controllers\\CiudadanosController.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CiudadanosController->buscarCiudadano('3')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CiudadanosController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-26 14:20:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_modificar_ciudadano.php"
+[Method: GET, Route: buscar_ciudadano/3]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_modificar_ciudadano.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_ciudadano', [], true)
+ 3 APPPATH\Controllers\CiudadanosController.php(47): view('form_modificar_ciudadano', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CiudadanosController->buscarCiudadano('3')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CiudadanosController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-26 14:23:29 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`fs2024_ciudadanos`.`ciudadanos`, CONSTRAINT `ciudadanos_ibfk_2` FOREIGN KEY (`cod_nivel_acad`) REFERENCES `nivelesacademicos` (`cod_nivel_acad`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\fs2024\ci4_ciudadanos\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\ci4_ciudadanos\system\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `ciudada...', 0)
+#1 C:\xampp\htdocs\fs2024\ci4_ciudadanos\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `ciudada...')
+#2 C:\xampp\htdocs\fs2024\ci4_ciudadanos\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `ciudada...')
+#3 C:\xampp\htdocs\fs2024\ci4_ciudadanos\system\Database\BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `ciudada...', Array, false)
+#4 C:\xampp\htdocs\fs2024\ci4_ciudadanos\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\fs2024\ci4_ciudadanos\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\fs2024\ci4_ciudadanos\system\Model.php(865): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\fs2024\ci4_ciudadanos\app\Controllers\CiudadanosController.php(64): CodeIgniter\Model->update('3', Array)
+#8 C:\xampp\htdocs\fs2024\ci4_ciudadanos\system\CodeIgniter.php(933): App\Controllers\CiudadanosController->modificarCiudadano()
+#9 C:\xampp\htdocs\fs2024\ci4_ciudadanos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CiudadanosController))
+#10 C:\xampp\htdocs\fs2024\ci4_ciudadanos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\fs2024\ci4_ciudadanos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\fs2024\ci4_ciudadanos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\fs2024\ci4_ciudadanos\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-07-26 14:23:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`fs2024_ciudadanos`.`ciudadanos`, CONSTRAINT `ciudadanos_ibfk_2` FOREIGN KEY (`cod_nivel_acad`) REFERENCES `nivelesacademicos` (`cod_nivel_acad`) ON DELETE CASCADE ON UPDATE CASCADE)
+[Method: POST, Route: modificar_ciudadano]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `ciudadanos` SET `dpi` = :dpi:, `apellido` = :apellido:, `nombre` = :nombre:, `direccion` = :direccion:, `tel_casa` = :tel_casa:, `tel_movil` = :tel_movil:, `email` = :email:, `fechanac` = :fechanac:, `cod_nivel_acad` = :cod_nivel_acad:, `cod_muni` = :cod_muni:, `contra` = :contra:
+WHERE `ciudadanos`.`dpi` IN :ciudadanos.dpi:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\CiudadanosController.php(64): CodeIgniter\Model->update('3', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CiudadanosController->modificarCiudadano()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CiudadanosController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-26 14:23:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`fs2024_ciudadanos`.`ciudadanos`, CONSTRAINT `ciudadanos_ibfk_2` FOREIGN KEY (`cod_nivel_acad`) REFERENCES `nivelesacademicos` (`cod_nivel_acad`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `ciudadanos` SET `dpi` = \'3\', `apellido` = \'Prueba Mod\', `nombre` = \'Nuevo Mod\', `direccion` = \'50av, Zona 9\', `tel_casa` = \'99999999\', `tel_movil` = \'99999999\', `email` = \'prueba@mod.com\', `fechanac` = \'2024-07-09\', `cod_nivel_acad` = \'3\', `cod_muni` = \'914\', `contra` = \'999\'
+WHERE `ciudadanos`.`dpi` IN (\'3\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `ciudadanos` SET `dpi` = \'3\', `apellido` = \'Prueba Mod\', `nombre` = \'Nuevo Mod\', `direccion` = \'50av, Zona 9\', `tel_casa` = \'99999999\', `tel_movil` = \'99999999\', `email` = \'prueba@mod.com\', `fechanac` = \'2024-07-09\', `cod_nivel_acad` = \'3\', `cod_muni` = \'914\', `contra` = \'999\'
+WHERE `ciudadanos`.`dpi` IN (\'3\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `ciudadanos` SET `dpi` = :dpi:, `apellido` = :apellido:, `nombre` = :nombre:, `direccion` = :direccion:, `tel_casa` = :tel_casa:, `tel_movil` = :tel_movil:, `email` = :email:, `fechanac` = :fechanac:, `cod_nivel_acad` = :cod_nivel_acad:, `cod_muni` = :cod_muni:, `contra` = :contra:
+WHERE `ciudadanos`.`dpi` IN :ciudadanos.dpi:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\CiudadanosController.php(64): CodeIgniter\Model->update('3', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CiudadanosController->modificarCiudadano()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CiudadanosController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-26 14:23:29 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`fs2024_ciudadanos`.`ciudadanos`, CONSTRAINT `ciudadanos_ibfk_2` FOREIGN KEY (`cod_nivel_acad`) REFERENCES `nivelesacademicos` (`cod_nivel_acad`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `ciudadanos` SET `dpi` = \'3\', `apellido` = \'Prueba Mod\', `nombre` = \'Nuevo Mod\', `direccion` = \'50av, Zona 9\', `tel_casa` = \'99999999\', `tel_movil` = \'99999999\', `email` = \'prueba@mod.com\', `fechanac` = \'2024-07-09\', `cod_nivel_acad` = \'3\', `cod_muni` = \'914\', `contra` = \'999\'
+WHERE `ciudadanos`.`dpi` IN (\'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `ciudadanos` SET `dpi` = \'3\', `apellido` = \'Prueba Mod\', `nombre` = \'Nuevo Mod\', `direccion` = \'50av, Zona 9\', `tel_casa` = \'99999999\', `tel_movil` = \'99999999\', `email` = \'prueba@mod.com\', `fechanac` = \'2024-07-09\', `cod_nivel_acad` = \'3\', `cod_muni` = \'914\', `contra` = \'999\'
+WHERE `ciudadanos`.`dpi` IN (\'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `ciudadanos` SET `dpi` = \'3\', `apellido` = \'Prueba Mod\', `nombre` = \'Nuevo Mod\', `direccion` = \'50av, Zona 9\', `tel_casa` = \'99999999\', `tel_movil` = \'99999999\', `email` = \'prueba@mod.com\', `fechanac` = \'2024-07-09\', `cod_nivel_acad` = \'3\', `cod_muni` = \'914\', `contra` = \'999\'
+WHERE `ciudadanos`.`dpi` IN (\'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `ciudadanos` SET `dpi` = :dpi:, `apellido` = :apellido:, `nombre` = :nombre:, `direccion` = :direccion:, `tel_casa` = :tel_casa:, `tel_movil` = :tel_movil:, `email` = :email:, `fechanac` = :fechanac:, `cod_nivel_acad` = :cod_nivel_acad:, `cod_muni` = :cod_muni:, `contra` = :contra:
+WHERE `ciudadanos`.`dpi` IN :ciudadanos.dpi:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\CiudadanosController.php(64): CodeIgniter\Model->update('3', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CiudadanosController->modificarCiudadano()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CiudadanosController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-26 14:58:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+[Method: POST, Route: modificar_nivel]
+in SYSTEMPATH\Model.php on line 456.
+ 1 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\NivelesController.php(47): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NivelesController->modificarNivel()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NivelesController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-26 14:59:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+[Method: POST, Route: modificar_nivel]
+in SYSTEMPATH\Model.php on line 456.
+ 1 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\NivelesController.php(47): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NivelesController->modificarNivel()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NivelesController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
